@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @author TODO: please add student ID and name here
+ * @author TODO: please add student ID and name here B0344144 蘇鵬均
  * Try to write some comments for your codes (methods, 15 points)
  */
 public class HW2 {
@@ -26,8 +26,8 @@ public class HW2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards 所有的牌
-	 * @param nDeck 總共有幾副牌
+	 * @param allCards �������
+	 * @param nDeck 蝮賢��嗾����
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -77,13 +77,36 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
+		
+		for(int i =0;i<nDeck ; i++)  //N副牌
+		{
+			for(int x =1;x<=4;x++) //4花色
+			{
+				for (int y =1; y<=13 ;y++)  //13張
+				{
+					Card card = new Card(x,y);
+					cards.add(card);
+										
+				}
+			}
+		}
 
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-
+		int DC=1; //計算第幾副撲克牌的數量
+		for(int i=0;i<cards.size();i++) {
+			if(i%52==0) {
+				System.out.println("\nDeck_"+DC); //印出第DC副牌
+				DC++;
+				}
+			cards.get(i).printCard();   //print所有牌
+			}
+	
+		
+		
 	}
 	public ArrayList<Card> getAllCards(){
 		return cards;
@@ -106,8 +129,74 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-
-	}
+		switch(suit)//把數字改英文
+		{ 
+		case 1:
+			switch(rank) {
+			case 11:
+				System.out.println(suit+","+rank + " is J of Clubs");
+				break;
+			case 12:
+				System.out.println(suit+","+rank + " is Q of Clubs");
+				break;
+			case 13:
+				System.out.println(suit+","+rank + " is K of Clubs");
+				break;
+			default:
+				System.out.println(suit+","+rank + " is "+ rank +" of Clubs");
+				break;
+			}
+			break;
+		case 2:
+			switch(rank) {
+			case 11:
+				System.out.println(suit+","+rank + " is J of Diamonds");
+				break;
+			case 12:
+				System.out.println(suit+","+rank + " is Q of Diamonds");
+				break;
+			case 13:
+				System.out.println(suit+","+rank + " is K of Diamonds");
+				break;
+			default:
+				System.out.println(suit+","+rank + " is "+ rank +" of Diamonds");
+				break;
+			}
+			break;
+		case 3:
+			switch(rank) {
+			case 11:
+				System.out.println(suit+","+rank + " is J of Hearts");
+				break;
+			case 12:
+				System.out.println(suit+","+rank + " is Q of Hearts");
+				break;
+			case 13:
+				System.out.println(suit+","+rank + " is K of Hearts");
+				break;
+			default:
+				System.out.println(suit+","+rank + " is "+ rank +" of Hearts");
+				break;
+			}
+			break;
+		case 4:
+			switch(rank) {
+			case 11:
+				System.out.println(suit+","+rank + " is J of Speads");
+				break;
+			case 12:
+				System.out.println(suit+","+rank + " is Q of Speads");
+				break;
+			case 13:
+				System.out.println(suit+","+rank + " is K of Speads");
+				break;
+			default:
+				System.out.println(suit+","+rank + " is "+ rank +" of Speads");
+				break;
+			}
+			break;
+			}
+		}
 	public int getSuit(){
 		return suit;
 	}
