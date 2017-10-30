@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author TODO: please add student ID and name here B0344144 蘇鵬均
  * Try to write some comments for your codes (methods, 15 points)
- * Deck()method added the 52 cards of n deck by implement Card class int arrayList
+ * Deck()method added the 52 cards of n deck by implement Card class into arrayList
  * printDeck() print all the cards in arrayList,each 52 card will change one deck
  * Card() gets cards and printCard() select the each card to right translation
  */
