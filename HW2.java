@@ -5,6 +5,9 @@ import java.util.Scanner;
 /**
  * @author TODO: please add student ID and name here B0344144 蘇鵬均
  * Try to write some comments for your codes (methods, 15 points)
+ * Deck()method added the 52 cards of n deck by implement Card class int arrayList
+ * printDeck() print all the cards in arrayList,each 52 card will change one deck
+ * Card() gets cards and printCard() select the each card to right translation
  */
 public class HW2 {
 
@@ -98,8 +101,8 @@ class Deck{
 		//TODO: please implement and reuse printCard method in Card class (5 points)
 		int DC=1; //計算第幾副撲克牌的數量
 		for(int i=0;i<cards.size();i++) {
-			if(i%52==0) {
-				System.out.println("\nDeck_"+DC); //印出第DC副牌
+			if(i%52==0) { //print deck number when a new deck start
+				System.out.println("Deck-"+DC); //印出第DC副牌
 				DC++;
 				}
 			cards.get(i).printCard();   //print所有牌
@@ -134,64 +137,64 @@ class Card{
 		case 1:
 			switch(rank) {
 			case 11:
-				System.out.println(suit+","+rank + " is J of Clubs");
+				System.out.println(suit+"-"+rank + " = J of Clubs");
 				break;
 			case 12:
-				System.out.println(suit+","+rank + " is Q of Clubs");
+				System.out.println(suit+"-"+rank + " = Q of Clubs");
 				break;
 			case 13:
-				System.out.println(suit+","+rank + " is K of Clubs");
+				System.out.println(suit+"-"+rank + " = K of Clubs");
 				break;
 			default:
-				System.out.println(suit+","+rank + " is "+ rank +" of Clubs");
+				System.out.println(suit+"-"+rank + " is "+ rank +" of Clubs");
 				break;
 			}
 			break;
 		case 2:
 			switch(rank) {
 			case 11:
-				System.out.println(suit+","+rank + " is J of Diamonds");
+				System.out.println(suit+"-"+rank + " = J of Diamonds");
 				break;
 			case 12:
-				System.out.println(suit+","+rank + " is Q of Diamonds");
+				System.out.println(suit+"-"+rank + " = Q of Diamonds");
 				break;
 			case 13:
-				System.out.println(suit+","+rank + " is K of Diamonds");
+				System.out.println(suit+"-"+rank + " = K of Diamonds");
 				break;
 			default:
-				System.out.println(suit+","+rank + " is "+ rank +" of Diamonds");
+				System.out.println(suit+"-"+rank + " = "+ rank +" of Diamonds");
 				break;
 			}
 			break;
 		case 3:
 			switch(rank) {
 			case 11:
-				System.out.println(suit+","+rank + " is J of Hearts");
+				System.out.println(suit+"-"+rank + " = J of Hearts");
 				break;
 			case 12:
-				System.out.println(suit+","+rank + " is Q of Hearts");
+				System.out.println(suit+"-"+rank + " = Q of Hearts");
 				break;
 			case 13:
-				System.out.println(suit+","+rank + " is K of Hearts");
+				System.out.println(suit+"-"+rank + " = K of Hearts");
 				break;
 			default:
-				System.out.println(suit+","+rank + " is "+ rank +" of Hearts");
+				System.out.println(suit+"-"+rank + " = "+ rank +" of Hearts");
 				break;
 			}
 			break;
 		case 4:
 			switch(rank) {
 			case 11:
-				System.out.println(suit+","+rank + " is J of Speads");
+				System.out.println(suit+"-"+rank + " = J of Speads");
 				break;
 			case 12:
-				System.out.println(suit+","+rank + " is Q of Speads");
+				System.out.println(suit+"-"+rank + " = Q of Speads");
 				break;
 			case 13:
-				System.out.println(suit+","+rank + " is K of Speads");
+				System.out.println(suit+"-"+rank + " = K of Speads");
 				break;
 			default:
-				System.out.println(suit+","+rank + " is "+ rank +" of Speads");
+				System.out.println(suit+"-"+rank + " = "+ rank +" of Speads");
 				break;
 			}
 			break;
